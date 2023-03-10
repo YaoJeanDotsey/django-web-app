@@ -1,0 +1,17 @@
+{% extends 'listings/base.html' %}
+
+
+{% block content %}
+<h2> {{ bands.name }}</h2>
+
+<ul>
+    <li>Type: {{ bands.type }} </li>
+    <li>Solde: {{ bands.sold|yesno }} </li>
+    <li> Description : {{ bands.description }} </li>
+    <li>Annee: {{bands.year}} </li>
+</ul>
+<a href="{% url 'band-update' bands.id  %}">modifier le groupe</a>
+<a href="{% url 'band-list' %}"> retourner a tous les groupes</a>
+<a href="{% url 'band-delete' bands.id %}">supprimer le groupe</a>
+
+{% endblock content %}

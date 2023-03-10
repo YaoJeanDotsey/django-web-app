@@ -1,0 +1,9 @@
+<p>Bienvenue dans la section Nous contacter</p>
+
+
+<form action="" method="post", novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit", value="envoyer">
+</form>
+<a href="{% url 'band-list'%}">retourner sur la page d'acceuil</a>
